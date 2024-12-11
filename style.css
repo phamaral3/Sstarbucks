@@ -1,0 +1,144 @@
+:root {
+    --cor-principal: #017143;
+    --cor-secundaria: #008a51;
+    --cor-texto: #333333;
+    --tamanho-fonte-h2: 48px; /* Tamanho menor */
+    --tamanho-fonte-paragrafo: 14px; /* Tamanho menor */
+    --raio-botao: 30px; /* Bordas menores */
+}
+
+* {
+    font-family: "Poppins", Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    margin-bottom: -5px;
+}
+
+body {
+    padding: 20px 5%;
+    overflow: hidden;
+}
+
+.caixa-conteudo {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap; /* Adicionado para evitar quebra em telas menores */
+}
+
+.caixa-textos {
+    width: 500px; /* Largura menor */
+    max-width: 100%;
+}
+
+h2 {
+    color: var(--cor-texto);
+    font-size: var(--tamanho-fonte-h2);
+    font-weight: 600;
+}
+
+.texto-starbuck {
+    color: var(--cor-principal);
+    font-weight: 900;
+    font-size: calc(var(--tamanho-fonte-h2) + 6px); /* Ajuste proporcional */
+}
+
+p {
+    font-size: var(--tamanho-fonte-paragrafo);
+    line-height: 1.5;
+}
+
+button {
+    background-color: var(--cor-principal);
+    color: #ffffff;
+    border-radius: var(--raio-botao);
+    padding: 8px 16px; /* Menor espaçamento */
+    border: none;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    background-color: var(--cor-secundaria);
+}
+
+.logo {
+    width: 60px; /* Logo menor */
+}
+
+.caixa-menu {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap; /* Ajusta botões em telas pequenas */
+}
+
+.botao-menu {
+    width: 60px; /* Botões menores */
+    cursor: pointer;
+    margin: 8px;
+    transition: transform 0.3s ease;
+}
+
+.botao-menu:hover {
+    transform: translateY(-20px); /* Menor movimento */
+}
+
+.caixa-imagem {
+    width: 500px; /* Imagem menor */
+    max-width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    margin: auto;
+    padding-top: 20px;
+}
+
+.copo {
+    width: 280px; /* Menor largura */
+    max-width: 100%;
+}
+
+.circulo {
+    width: 100%;
+    height: 100%;
+    background: var(--cor-principal);
+    position: absolute;
+    top: 0;
+    left: 0;
+    clip-path: circle(40vw at right 70%); /* Tamanho ajustado */
+    z-index: -1;
+}
+
+@media (max-width: 768px) {
+    body {
+        padding: 10px;
+    }
+
+    .caixa-conteudo {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .caixa-textos {
+        width: 100%;
+    }
+
+    .caixa-imagem {
+        margin: 20px 0;
+    }
+
+    h2 {
+        font-size: 36px; /* Menor em telas pequenas */
+    }
+
+    .texto-starbuck {
+        font-size: 42px; /* Ajuste proporcional */
+    }
+
+    p {
+        font-size: 12px; /* Texto ainda menor */
+    }
+}
